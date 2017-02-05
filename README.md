@@ -40,7 +40,7 @@ class YourComponent extends Component
     render(){
         return (<IntersectionVisible onIntersect={ e => this.onIntersect( e ) }
                                      onHide={ e => this.onHide( e ) }>
-                                     onShow={ e => this.onShow( e ) }>>
+                                     onShow={ e => this.onShow( e ) }>
                     <div>
                         blah blah blah  blah blah blah  blah blah blah  blah blah
                           blah blah blah  blah blah blah  blah blah blah
