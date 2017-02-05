@@ -10,7 +10,7 @@ export default class Visible extends Component
     onHide      : PropTypes.func,
     options     : PropTypes.shape( {
       root       : PropTypes.node,
-      rootMargin : PropTypes.number,
+      rootMargin : PropTypes.string,
       threshold  : PropTypes.oneOfType( PropTypes.number, PropTypes.array ),
     } ),
   };
