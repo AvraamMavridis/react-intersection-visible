@@ -1,9 +1,10 @@
 # react-intersection-visible
-Experimental HOC-wrapper Component that helps you track when an element in your DOM enters the visible viewport. It uses the new [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver)
-
+HOC-wrapper Component that helps you track when an element enters in the viewport. It uses the new [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver)
+with polyfill fallback
 
 [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![CircleCI](https://circleci.com/gh/AvraamMavridis/react-intersection-visible/tree/master.svg?style=svg)](https://circleci.com/gh/AvraamMavridis/react-intersection-visible/tree/master)
 
 ###How to use
 
@@ -65,6 +66,7 @@ More about the options [here](https://developers.google.com/web/updates/2016/04/
 
 ###Changelog:
 
+05-02-2017 Release version 1.1.1
 05-02-2017 Release version 1.1.0
 11-06-2016 Release version 1.0.0
 
