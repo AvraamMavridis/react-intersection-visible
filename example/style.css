@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+}
+
+.visible, .invisible {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 20px;
+    display: block;
+}
+
+.visible {
+    background-color: darkgreen;
+}
+
+.invisible {
+    background-color: indianred;
+}
+
+.element {
+    margin: 500px 0 ;
+    height: 300px;
+    width: 50px;
+    background-color: papayawhip;
+    display: block;
+}
