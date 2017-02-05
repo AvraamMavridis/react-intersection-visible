@@ -60,4 +60,62 @@ describe( '<Visible />', () =>
     expect( instance.observer.disconnect ).toHaveBeenCalled();
   } );
 
+  it( 'should call unobserve of the observer, when stopObserving is called', () =>
+  {
+    const onIntersect = jest.fn();
+    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.stopObserving();
+    expect( instance.observer.unobserve ).toHaveBeenCalled();
+  } );
+
+  it( 'should start observing on props change if active is true', () =>
+  {
+    const onIntersect = jest.fn();
+    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.startObserving = jest.fn();
+    wrapper.setProps( { active : true } );
+    expect( instance.startObserving ).toHaveBeenCalled();
+  } );
+
+  it( 'should stop observing on props change if active is false', () =>
+  {
+    const onIntersect = jest.fn();
+    const wrapper = mount( <Visible active className="visible" onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.stopObserving = jest.fn();
+    wrapper.setProps( { active : false } );
+    expect( instance.stopObserving ).toHaveBeenCalled();
+  } );
+
+  it( 'should stop observing on props change if active is false', () =>
+  {
+    const onIntersect = jest.fn();
+    const onShow = jest.fn();
+    const wrapper = mount( <Visible active className="visible" onShow={ onShow } onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.handleObserverUpdate( [ { intersectionRect : { top : 1, bottom : 1, left : 1, right : 1 } } ] );
+    expect( onShow ).toHaveBeenCalled();
+  } );
+
+  it( 'should stop observing on props change if active is false', () =>
+  {
+    const onIntersect = jest.fn();
+    const onHide = jest.fn();
+    const wrapper = mount( <Visible active className="visible" onHide={ onHide } onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.handleObserverUpdate( [ { intersectionRect : { top : 0, bottom : 0, left : 0, right : 0 } } ] );
+    expect( onHide ).toHaveBeenCalled();
+  } );
+
+  it( 'should stop observing on props change if active is false', () =>
+  {
+    const onIntersect = jest.fn();
+    const wrapper = mount( <Visible active className="visible" onIntersect={ onIntersect } /> );
+    const instance = wrapper.instance();
+    instance.handleObserverUpdate( [ { intersectionRect : { top : 0, bottom : 0, left : 0, right : 0 } } ] );
+    expect( onIntersect ).toHaveBeenCalled();
+  } );
+
 } );

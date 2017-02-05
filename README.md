@@ -62,14 +62,10 @@ class YourComponent extends Component
 
 More about the options [here](https://developers.google.com/web/updates/2016/04/intersectionobserver?hl=en)
 
-### Browser support
-
-Currently supported only on Chrome
-
-![BrowserSupport](http://s33.postimg.org/658ehjuvz/Screen_Shot_2016_06_11_at_09_10_08.png)
 
 ###Changelog:
 
+05-02-2017 Release version 1.1.0
 11-06-2016 Release version 1.0.0
 
 ### Contribute
