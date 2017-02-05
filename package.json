@@ -1,6 +1,6 @@
 {
   "name": "react-intersection-visible",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/AvraamMavridis/react-intersection-visible",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
+    "test:ci": "jest && codecov -t 093d8142-5ad4-418f-b525-8a75e8291871",
     "compile": "babel --presets es2015,stage-0,react -d lib/ src/",
     "prepublish": "npm run compile",
     "watch": "npm-scripts-watcher",
@@ -31,7 +32,8 @@
     "coverageReporters": [
       "json",
       "text",
-      "html"
+      "html",
+      "lcovonly"
     ],
     "coverageCollector": "jest-babel-istanbul"
   },
@@ -59,6 +61,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "babel-register": "^6.6.0",
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "enzyme": "^2.7.1",
     "eslint": "^2.6.0",
     "eslint-config-airbnb": "^7.0.0",
