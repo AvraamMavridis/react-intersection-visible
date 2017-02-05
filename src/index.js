@@ -77,6 +77,8 @@ export default class Visible extends Component
   render()
   {
     const { className } = this.props;
-    return ( <span className={className} ref="visible">{ this.props.children }</span> );
+    return ( <span className={className} ref={node => this.node = node }>
+                { this.props.children }
+            </span> );
   }
 }
