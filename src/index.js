@@ -42,13 +42,13 @@ export default class Visible extends Component
 
   componentDidMount()
   {
-    this[ intersectionObserver ].observe( this.refs.visible );
+    this[ intersectionObserver ].observe( this.node );
   }
 
   render()
   {
 
-    return ( <span ref="visible">
+    return ( <span ref={node => this.node = node }>
                 { this.props.children }
             </span> );
   }
