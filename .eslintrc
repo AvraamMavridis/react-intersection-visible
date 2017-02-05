@@ -26,7 +26,60 @@
         "space-in-parens": [2, "always"],
         "key-spacing": [2, { "align": "colon", "beforeColon": true, "afterColon": true }],
         "brace-style": [2, "allman", { "allowSingleLine": true }],
-        "array-bracket-spacing" : [2, "always"]
+        "array-bracket-spacing" : [2, "always"],
+        "no-return-assign": 0,
+        "jsx-quotes": [2, "prefer-double"],
+        "react/jsx-boolean-value": 2,
+        "react/jsx-curly-spacing": [2, "always"],
+        "react/jsx-equals-spacing": [2, "never"],
+        "react/jsx-indent": [2, 2],
+        "react/jsx-indent-props": [2, 2],
+        "react/jsx-no-duplicate-props": 2,
+        "react/jsx-no-undef": 2,
+        "react/jsx-space-before-closing": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/self-closing-comp": 2,
+        "react/jsx-no-bind": [2, {
+        "allowArrowFunctions": true,
+        "allowBind": false,
+        "ignoreRefs": true
+        }],
+        "react/no-did-update-set-state": 2,
+        "react/no-did-mount-set-state": 2,
+        "react/no-direct-mutation-state": 2,
+        "react/prefer-es6-class": [2, "always"],
+        "react/no-unknown-property": 2,
+        "react/prop-types": 2,
+        "react/react-in-jsx-scope": 2,
+        "react/sort-comp": [2, {
+        "order": [
+            "static-methods",
+            "everything-else",
+            "lifecycle",
+            "render"
+        ],
+        "groups": {
+            "lifecycle": [
+            "getDefaultProps",
+            "getInitialState",
+            "componentWillMount",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentWillUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount"
+            ]
+        }
+        }]
+    },
+    "globals": {
+        "React": true,
+        "expect": true,
+        "it": true,
+        "describe": true,
+        "jest": true
     },
     "parser": "babel-eslint",
     "env": {
@@ -34,5 +87,5 @@
         "browser": true,
         "node": true
     },
-    "extends": "airbnb/base"
+    "extends": "airbnb"
 }

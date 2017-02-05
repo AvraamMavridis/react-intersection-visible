@@ -10,7 +10,7 @@
   "description": "react intersection visible",
   "scripts": {
     "lint": "eslint src",
-    "test": "mocha --compilers js:babel-register",
+    "test": "jest",
     "compile": "babel --presets es2015,stage-0,react -d lib/ src/",
     "prepublish": "npm run compile",
     "watch": "npm-scripts-watcher",
@@ -21,6 +21,19 @@
     "src/**/*.js": [
       "compile"
     ]
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": "(/__tests__/.*|(\\.|/)(jest))\\.jsx?$",
+    "automock": false,
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "json",
+      "text",
+      "html"
+    ],
+    "coverageCollector": "jest-babel-istanbul"
   },
   "keywords": [
     "react",
@@ -39,20 +52,30 @@
     "babel-cli": "^6.9.0",
     "babel-core": "^6.7.4",
     "babel-eslint": "^6.0.4",
+    "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.1.18",
     "babel-register": "^6.6.0",
     "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
     "eslint": "^2.6.0",
     "eslint-config-airbnb": "^7.0.0",
     "eslint-config-google": "^0.4.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0",
+    "jest": "^18.1.0",
+    "jest-babel-istanbul": "^0.1.0",
     "mocha": "^2.1.0",
     "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.2.1"
   }
 }
