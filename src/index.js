@@ -56,7 +56,7 @@ export default class Visible extends Component
    */
   startObserving()
   {
-    this.observer.observe( this.refs.visible );
+    this.observer.observe( this.node );
   }
 
   /**
@@ -66,7 +66,7 @@ export default class Visible extends Component
    */
   stopObserving()
   {
-    this.observer.unobserve( this.refs.visible );
+    this.observer.unobserve( this.node );
   }
 
   /**
