@@ -1,6 +1,7 @@
 import 'intersection-observer';
 /* eslint-disable no-unused-vars */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 /* eslint-enable no-unused-vars */
 
 export default class Visible extends Component

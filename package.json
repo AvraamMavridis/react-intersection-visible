@@ -79,6 +79,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
-    "intersection-observer": "^0.2.1"
+    "intersection-observer": "^0.2.1",
+    "prop-types": "^15.6.1"
   }
 }
