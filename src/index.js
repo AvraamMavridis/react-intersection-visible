@@ -1,6 +1,7 @@
 import 'intersection-observer';
 /* eslint-disable no-unused-vars */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 /* eslint-enable no-unused-vars */
 
 export default class Visible extends Component
@@ -55,7 +56,7 @@ export default class Visible extends Component
    */
   startObserving()
   {
-    this.observer.observe( this.refs.visible );
+    this.observer.observe( this.node );
   }
 
   /**
@@ -65,7 +66,7 @@ export default class Visible extends Component
    */
   stopObserving()
   {
-    this.observer.unobserve( this.refs.visible );
+    this.observer.unobserve( this.node );
   }
 
   /**
