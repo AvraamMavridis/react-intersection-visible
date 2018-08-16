@@ -15,13 +15,13 @@ window.IntersectionObserver = jest.fn().mockImplementation( () =>
 
 describe( '<Visible />', () =>
 {
-  it( 'should have a wrapper span with the passed className', () =>
+  it( 'should have a wrapper div with the passed className', () =>
   {
     const onIntersect = jest.fn();
     const wrapper = mount( <Visible className="visible" onIntersect={ onIntersect } /> );
-    const span = wrapper.find( 'span' );
-    expect( span.length ).toBe( 1 );
-    expect( span.prop( 'className' ) ).toBe( 'visible' );
+    const div = wrapper.find( 'div' );
+    expect( div.length ).toBe( 1 );
+    expect( div.prop( 'className' ) ).toBe( 'visible' );
   } );
 
   it( 'should have an observer', () =>

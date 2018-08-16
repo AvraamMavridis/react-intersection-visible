@@ -64,13 +64,6 @@ class YourComponent extends Component
 
 More about the options [here](https://developers.google.com/web/updates/2016/04/intersectionobserver?hl=en)
 
-
-###Changelog:
-
-05-02-2017 Release version 1.1.1
-05-02-2017 Release version 1.1.0
-11-06-2016 Release version 1.0.0
-
 ### Contribute
 
 Any pull-request is more than welcome :boom: :smile:
