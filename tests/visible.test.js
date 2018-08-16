@@ -1,121 +1,117 @@
-/* eslint-disable no-unused-vars */
-import React, { PropTypes, Component } from 'react';
-/* eslint-enable no-unused-vars */
-import Visible from '../src/index.js';
 import { mount } from 'enzyme';
+import React from 'react';
+import Visible from '../src/index';
 
-window.IntersectionObserver = jest.fn().mockImplementation( () =>
-{
+window.IntersectionObserver = jest.fn().mockImplementation(() => {
   return {
-    observe    : jest.fn(),
-    unobserve  : jest.fn(),
-    disconnect : jest.fn(),
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
   };
-} );
+});
 
-describe( '<Visible />', () =>
-{
-  it( 'should have a wrapper div with the passed className', () =>
-  {
+describe('<Visible />', () => {
+  it('should have a wrapper div with the passed className', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible className="visible" onIntersect={ onIntersect } /> );
-    const div = wrapper.find( 'div' );
-    expect( div.length ).toBe( 1 );
-    expect( div.prop( 'className' ) ).toBe( 'visible' );
-  } );
+    const wrapper = mount(<Visible className="visible" onIntersect={ onIntersect } />);
+    const div = wrapper.find('div');
+    expect(div.length).toBe(1);
+    expect(div.prop('className')).toBe('visible');
+  });
 
-  it( 'should have an observer', () =>
-  {
+  it('should have an observer', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible className="visible" onIntersect={ onIntersect } /> );
-    const observer = wrapper.instance().observer;
-    expect( observer ).toBeDefined();
-  } );
+    const wrapper = mount(<Visible className="visible" onIntersect={ onIntersect } />);
+    const { observer } = wrapper.instance();
+    expect(observer).toBeDefined();
+  });
 
-  it( 'should start observing if active prop is true', () =>
-  {
+  it('should start observing if active prop is true', () => {
     const onIntersect = jest.fn();
     Visible.prototype.startObserving = jest.fn();
-    const wrapper = mount( <Visible active className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active className="visible" onIntersect={ onIntersect } />);
     wrapper.instance().startObserving = jest.fn();
-    expect( Visible.prototype.startObserving ).toHaveBeenCalled();
+    expect(Visible.prototype.startObserving).toHaveBeenCalled();
     Visible.prototype.startObserving.mockReset();
-  } );
+  });
 
-  it( 'should not start observing if active prop is false', () =>
-  {
+  it('should not start observing if active prop is false', () => {
     const onIntersect = jest.fn();
     Visible.prototype.startObserving = jest.fn();
-    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active={ false } className="visible" onIntersect={ onIntersect } />);
     wrapper.instance().startObserving = jest.fn();
-    expect( Visible.prototype.startObserving ).not.toHaveBeenCalled();
-  } );
+    expect(Visible.prototype.startObserving).not.toHaveBeenCalled();
+  });
 
-  it( 'should disconect observer onComponentUnmount', () =>
-  {
+  it('should disconect observer onComponentUnmount', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active={ false } className="visible" onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
     wrapper.unmount();
-    expect( instance.observer.disconnect ).toHaveBeenCalled();
-  } );
+    expect(instance.observer.disconnect).toHaveBeenCalled();
+  });
 
-  it( 'should call unobserve of the observer, when stopObserving is called', () =>
-  {
+  it('should call unobserve of the observer, when stopObserving is called', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active={ false } className="visible" onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
     instance.stopObserving();
-    expect( instance.observer.unobserve ).toHaveBeenCalled();
-  } );
+    expect(instance.observer.unobserve).toHaveBeenCalled();
+  });
 
-  it( 'should start observing on props change if active is true', () =>
-  {
+  it('should start observing on props change if active is true', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible active={ false } className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active={ false } className="visible" onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
     instance.startObserving = jest.fn();
-    wrapper.setProps( { active : true } );
-    expect( instance.startObserving ).toHaveBeenCalled();
-  } );
+    wrapper.setProps({ active: true });
+    expect(instance.startObserving).toHaveBeenCalled();
+  });
 
-  it( 'should stop observing on props change if active is false', () =>
-  {
+  it('should stop observing on props change if active is false', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible active className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active className="visible" onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
     instance.stopObserving = jest.fn();
-    wrapper.setProps( { active : false } );
-    expect( instance.stopObserving ).toHaveBeenCalled();
-  } );
+    wrapper.setProps({ active: false });
+    expect(instance.stopObserving).toHaveBeenCalled();
+  });
 
-  it( 'should stop observing on props change if active is false', () =>
-  {
+  it('should stop observing on props change if active is false', () => {
     const onIntersect = jest.fn();
     const onShow = jest.fn();
-    const wrapper = mount( <Visible active className="visible" onShow={ onShow } onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active className="visible" onShow={ onShow } onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
-    instance.handleObserverUpdate( [ { intersectionRect : { top : 1, bottom : 1, left : 1, right : 1 } } ] );
-    expect( onShow ).toHaveBeenCalled();
-  } );
+    instance.handleObserverUpdate([ {
+      intersectionRect: {
+        top: 1, bottom: 1, left: 1, right: 1
+      }
+    } ]);
+    expect(onShow).toHaveBeenCalled();
+  });
 
-  it( 'should stop observing on props change if active is false', () =>
-  {
+  it('should stop observing on props change if active is false', () => {
     const onIntersect = jest.fn();
     const onHide = jest.fn();
-    const wrapper = mount( <Visible active className="visible" onHide={ onHide } onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active className="visible" onHide={ onHide } onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
-    instance.handleObserverUpdate( [ { intersectionRect : { top : 0, bottom : 0, left : 0, right : 0 } } ] );
-    expect( onHide ).toHaveBeenCalled();
-  } );
+    instance.handleObserverUpdate([ {
+      intersectionRect: {
+        top: 0, bottom: 0, left: 0, right: 0
+      }
+    } ]);
+    expect(onHide).toHaveBeenCalled();
+  });
 
-  it( 'should stop observing on props change if active is false', () =>
-  {
+  it('should stop observing on props change if active is false', () => {
     const onIntersect = jest.fn();
-    const wrapper = mount( <Visible active className="visible" onIntersect={ onIntersect } /> );
+    const wrapper = mount(<Visible active className="visible" onIntersect={ onIntersect } />);
     const instance = wrapper.instance();
-    instance.handleObserverUpdate( [ { intersectionRect : { top : 0, bottom : 0, left : 0, right : 0 } } ] );
-    expect( onIntersect ).toHaveBeenCalled();
-  } );
-
-} );
+    instance.handleObserverUpdate([ {
+      intersectionRect: {
+        top: 0, bottom: 0, left: 0, right: 0
+      }
+    } ]);
+    expect(onIntersect).toHaveBeenCalled();
+  });
+});
