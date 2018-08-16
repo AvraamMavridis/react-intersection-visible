@@ -2,10 +2,15 @@ sudo: false
 notifications:
   email: false
 language: node_js
+cache:
+  directories:
+    - node_modules
 node_js:
   - "8"
 before_script:
-  - yarn --ignore-engines
+  - npm i
+script:
+  - npm test
 after_success:
   - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
   - python travis_after_all.py
