@@ -64,6 +64,7 @@
     "jest": "^18.1.0",
     "jest-babel-istanbul": "^0.1.0",
     "mocha": "^2.1.0",
+    "raf": "^3.4.0",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
