@@ -2,18 +2,17 @@
 HOC-wrapper Component that helps you track when an element enters in the viewport. It uses the new [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver)
 with polyfill fallback
 
-[![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
-[![CircleCI](https://circleci.com/gh/AvraamMavridis/react-intersection-visible/tree/master.svg?style=svg)](https://circleci.com/gh/AvraamMavridis/react-intersection-visible/tree/master)
+[Demo](http://avraammavridis.github.io/react-intersection-visible/)
+
 [![codecov](https://codecov.io/gh/AvraamMavridis/react-intersection-visible/branch/master/graph/badge.svg)](https://codecov.io/gh/AvraamMavridis/react-intersection-visible)
 
-###How to use
+### How to use
 
 1. Import `IntersectionVisible` hoc component
 2. Wrap your main component with the `IntersectionVisible`
 3. Provide the options and callbacks you want
 
-###Example
+### Example
 
 
 ```javascript
@@ -53,7 +52,7 @@ class YourComponent extends Component
 
   ```
 
-###Options:
+### Options:
 
 | Name        | Description           
 | ------------- |-------------:|
