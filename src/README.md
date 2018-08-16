@@ -21,7 +21,7 @@ function setColor(color){
     alignItems: 'center',
     justifyContent: 'center'
   }}>
-    The background color of the body changes depending onn the visibility of this box.
+    The background color of the body changes depending on the visibility of this box.
     Scroll to see!
   </div>
 </IntersectionVisible>
