@@ -1,3 +1,13 @@
+#### 2.0.1 (2018-08-16)
+
+##### Chores
+
+*  Remove conflicting depedency ([f6b8ca29](https://github.com/AvraamMavridis/react-intersection-visible/commit/f6b8ca29252edbabe5b246cecffe26084c34027d))
+
+##### Documentation Changes
+
+*  Update documentation ([48059370](https://github.com/AvraamMavridis/react-intersection-visible/commit/48059370374135aafe26bf21b883da6e443373cb))
+
 ## 2.0.0 (2018-08-16)
 
 ##### Chores
