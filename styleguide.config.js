@@ -12,7 +12,7 @@ module.exports = {
   styleguideDir: path.join(__dirname, '/'),
   ribbon: {
     // Link to open on the ribbon click (required)
-    url: 'https://github.com/AvraamMavridis/currency-input',
+    url: 'https://github.com/AvraamMavridis/react-intersection-visible',
     // Text to show on the ribbon (optional)
     text: 'Fork me on GitHub'
   },
