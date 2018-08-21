@@ -1,3 +1,9 @@
+#### 2.0.3 (2018-08-21)
+
+##### Documentation Changes
+
+*  Update documentation page ([4f4c6a1a](https://github.com/AvraamMavridis/react-intersection-visible/commit/4f4c6a1acc875e0e628932f95b5194ad56e89c42))
+
 #### 2.0.2 (2018-08-21)
 
 ##### Chores
