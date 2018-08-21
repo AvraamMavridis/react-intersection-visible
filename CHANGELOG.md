@@ -1,3 +1,11 @@
+#### 2.0.2 (2018-08-21)
+
+##### Chores
+
+*  Update package.json ([333417b5](https://github.com/AvraamMavridis/react-intersection-visible/commit/333417b56d51218727a03aabd87ebbda439e95f5))
+*  Add lock file ([c534fb04](https://github.com/AvraamMavridis/react-intersection-visible/commit/c534fb04140bd80747b15c9560e0f08e7d3c6d6a))
+*  Fix fork link on Documentation ([c6c6ed6d](https://github.com/AvraamMavridis/react-intersection-visible/commit/c6c6ed6da19424c685fdbf04975957bfc437ea23))
+
 #### 2.0.1 (2018-08-16)
 
 ##### Chores
