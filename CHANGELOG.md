@@ -1,3 +1,9 @@
+#### 2.0.4 (2018-08-26)
+
+##### Chores
+
+* **package:**  update enzyme to version 3.4.4 ([#12](https://github.com/AvraamMavridis/react-intersection-visible/pull/12)) ([b27bf91c](https://github.com/AvraamMavridis/react-intersection-visible/commit/b27bf91cac8d417c02e268a25104a67e1dd9f58e))
+
 #### 2.0.3 (2018-08-21)
 
 ##### Documentation Changes
