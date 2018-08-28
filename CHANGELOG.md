@@ -1,3 +1,10 @@
+#### 2.0.5 (2018-08-28)
+
+##### Chores
+
+*  Update lock ([d752cbcf](https://github.com/AvraamMavridis/react-intersection-visible/commit/d752cbcf355507744b83c939a18daece666bb376))
+* **package:**  update babel-eslint to version 9.0.0 ([#14](https://github.com/AvraamMavridis/react-intersection-visible/pull/14)) ([a787547f](https://github.com/AvraamMavridis/react-intersection-visible/commit/a787547f067d56ac2bac6d4c7e49fc71c841c39e))
+
 #### 2.0.4 (2018-08-26)
 
 ##### Chores
