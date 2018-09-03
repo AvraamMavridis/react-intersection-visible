@@ -1,3 +1,11 @@
+#### 2.0.6 (2018-09-03)
+
+##### Chores
+
+* **package:**
+  *  update enzyme-adapter-react-16 to version 1.3.1 ([#16](https://github.com/AvraamMavridis/react-intersection-visible/pull/16)) ([705d7b7e](https://github.com/AvraamMavridis/react-intersection-visible/commit/705d7b7eaf571bca2d309525c57ed371d74a821e))
+  *  update babel-loader to version 8.0.0 ([#15](https://github.com/AvraamMavridis/react-intersection-visible/pull/15)) ([a51b605f](https://github.com/AvraamMavridis/react-intersection-visible/commit/a51b605f67c1124135b2ea1b5cfe36f17ca30995))
+
 #### 2.0.5 (2018-08-28)
 
 ##### Chores
