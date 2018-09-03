@@ -12,6 +12,8 @@ with polyfill fallback
 2. Wrap your main component with the `IntersectionVisible`
 3. Provide the options and callbacks you want
 
+
+
 ### Example
 
 
