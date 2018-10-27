@@ -4,7 +4,7 @@ with polyfill fallback
 
 [Demo](http://avraammavridis.github.io/react-intersection-visible/)
 
-[![codecov](https://codecov.io/gh/AvraamMavridis/react-intersection-visible/branch/master/graph/badge.svg)](https://codecov.io/gh/AvraamMavridis/react-intersection-visible) [![Build Status](https://travis-ci.org/AvraamMavridis/react-intersection-visible.svg?branch=master)](https://travis-ci.org/AvraamMavridis/react-intersection-visible) [![Greenkeeper badge](https://badges.greenkeeper.io/AvraamMavridis/react-intersection-visible.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/AvraamMavridis/react-intersection-visible.svg?branch=master)](https://travis-ci.org/AvraamMavridis/react-intersection-visible) [![Greenkeeper badge](https://badges.greenkeeper.io/AvraamMavridis/react-intersection-visible.svg)](https://greenkeeper.io/)
 
 ### How to use
 
