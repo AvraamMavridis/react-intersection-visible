@@ -34,7 +34,7 @@ class YourComponent extends Component
     {
         // do something
     }
-    
+
     onIntersect( entries )
     {
         // do something
@@ -42,7 +42,7 @@ class YourComponent extends Component
 
     render(){
         return (<IntersectionVisible onIntersect={ e => this.onIntersect( e ) }
-                                     onHide={ e => this.onHide( e ) }>
+                                     onHide={ e => this.onHide( e ) }
                                      onShow={ e => this.onShow( e ) }>
                     <div>
                         blah blah blah  blah blah blah  blah blah blah  blah blah
@@ -56,11 +56,11 @@ class YourComponent extends Component
 
 ### Options:
 
-| Name        | Description           
+| Name        | Description
 | ------------- |-------------:|
 | onIntersect    | Function that is called when the visibility status of the element change  |
-| onHide    | Function that is called when the element becomes invisible |  
-| onShow    | Function that is called when the element becomes visible  | 
+| onHide    | Function that is called when the element becomes invisible |
+| onShow    | Function that is called when the element becomes visible  |
 | options    | Object, with the extras options supported by the IntersectionObserver API (root, rootMargin, threshold)|
 
 More about the options [here](https://developers.google.com/web/updates/2016/04/intersectionobserver?hl=en)
