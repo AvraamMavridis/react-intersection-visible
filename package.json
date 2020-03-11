@@ -68,7 +68,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "latest",
-    "react-styleguidist": "^8.0.0",
+    "react-styleguidist": "^11.0.1",
     "react-test-renderer": "^16.4.2"
   },
   "dependencies": {
