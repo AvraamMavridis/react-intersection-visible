@@ -69,7 +69,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "latest",
     "react-styleguidist": "^8.0.0",
-    "react-test-renderer": "^16.4.2"
+    "react-test-renderer": "^16.13.1"
   },
   "dependencies": {
     "prop-types": "^15.6.1"
